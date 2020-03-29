@@ -1,13 +1,10 @@
 package com.example.jfedin.roomwordssample;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class WordListAdapter  extends RecyclerView.Adapter<WordListAdapter.WordViewHolder> {
@@ -24,7 +21,9 @@ public class WordListAdapter  extends RecyclerView.Adapter<WordListAdapter.WordV
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words
 
-    WordListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
+    WordListAdapter(Context context) {
+        mInflater = LayoutInflater.from(context);
+    }
 
     @Override
     public WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -43,7 +42,7 @@ public class WordListAdapter  extends RecyclerView.Adapter<WordListAdapter.WordV
         }
     }
 
-    void setWords(List<Word> words){
+    void setWords(List<Word> words) {
         mWords = words;
         notifyDataSetChanged();
     }
