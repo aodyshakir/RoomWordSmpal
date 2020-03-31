@@ -1,6 +1,7 @@
 package com.example.jfedin.roomwordssample;
 
 import android.app.Application;
+import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
@@ -22,6 +23,7 @@ public class WordRepository {
         mAllWords = mWordDao.getAlphabetizedWords();
     }
 
+
     // Room executes all queries on a separate thread.
     // Observed LiveData will notify the observer when the data has changed.
     LiveData<List<Word>> getAllWords() {
@@ -36,5 +38,15 @@ public class WordRepository {
 
         });
     }
-}
+
+
+    }
+
+
+
+
+
+
+
+
 

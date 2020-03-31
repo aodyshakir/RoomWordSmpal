@@ -55,4 +55,8 @@ public class WordListAdapter  extends RecyclerView.Adapter<WordListAdapter.WordV
             return mWords.size();
         else return 0;
     }
+
+
+
+
 }
